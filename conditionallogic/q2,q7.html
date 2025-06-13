@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    <!-- <button onclick="logdevice()">login and device</button>  -->
+    <!-- <p id="logindevice"></p> -->
+
+    <script>
+     /*   let loginstatus =prompt("enter the status(yes or no):")
+            let logindevice =prompt("enter the device(mobile or desktop:)")
+            message="";
+           
+            if(loginstatus=="yes"){
+                 if(logindevice=="mobile"){
+                    message="Mobile Dashboard";
+                 }
+                 else{
+                    message="Desktop Dashboard";
+                 }
+
+            } 
+            else{
+                message="Please login"
+            }
+
+            document.getElementById("logindevice").innerText=message
+
+
+Currency Converter App
+ Ask for currency type (USD, EUR, INR) and amount.
+ Use switch on currency:
+ • Inside each case
+ • If amount is more than 1000 →Addbonusamount
+ • Else →Usestandardconversion*/
+
+
+
+        let currency=prompt("enter currency(USD,EUR,INR)");
+        let amount=prompt("enter the amount");
+        message="";
+        switch (currency){
+            case"USD":
+            if(amount>1000){
+                message="add bonus amount";
+            }
+            else{
+                message='standardconversion';
+            }
+            break;
+
+            case "EUR":
+                if(amount>1000){
+                message="add bonus amount";
+            }
+            else{
+                message='standardconversion';
+            }
+            break;
+
+            case"INR":
+            if(amount>1000){
+                message="add bonus amount";
+            }
+            else{
+                message='standardconversion';
+            }
+        }
+        console.log(message);
+    </script>
+</body>
+</html>

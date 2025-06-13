@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <button onclick="valstatcoup()">cartvalue primestatus coupon</button>  -->
+     <!-- <p id="discount"></p>  -->
+
+    <script>
+
+/*function valstatcoup() {
+            let cartvalue = prompt("Enter cart value:");
+            let primestatus = prompt("Enter prime status (prime or notprime):");
+            let coupon = prompt("Enter coupon availability (applied or not):");
+            let message = "";
+
+            if (cartvalue > 500) {
+                if (primestatus == "prime") {
+                    message = "20 percent discount";
+                } else {
+                    if (primestatus == "notprime" && coupon == "applied") {
+                        message = "10 percent discount";
+                    } else if (primestatus == "") {
+                        message = "5 percent discount";
+                    } else {
+                        message = "No discount";
+                    }
+                }
+            } else {
+                message = "No discount";
+            }
+
+            document.getElementById("discount").innerText = message;
+        }
+
+
+
+
+    Role and Department Access Control
+ Ask for role (admin, manager, employee) and department.
+ Use switch on role:
+ • Inside each case
+ • If department is HR → Show"EditAccess Granted"
+ • Else →Show"ViewOnlyAccess"*/
+
+
+
+
+  let role=prompt("whatistherole(admin,manager,employee)");
+  let department=prompt("enter department");
+  message="";
+  switch (role){
+    case "admin":
+        if(department==="HR"){
+            message="Access granted";
+        }
+        else{
+            message="ViewOnlyAccess";
+
+        } break;
+        case "manager":
+        if(department==="HR"){
+            message="Access granted";
+        }
+        else{
+            message="ViewOnlyAccess";
+
+        } break;
+        case "employee":
+        if(department==="HR"){
+            message="Access granted";
+        }
+        else{
+            message="ViewOnlyAccess";
+
+        } break;
+
+  }
+  console.log(message);
+
+
+
+
+    </script>
+</body>
+</html>

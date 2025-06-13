@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+    <script>
+    let temperature =prompt("enter temperature in celsius:");
+            message="";
+            if(temperature>35){
+                let timeofday =prompt("enter time of day:");
+                if(timeofday==="afternoon"){
+                    message="Extreme Heat Warning";
+                }
+                else{
+                    message="Hot Weather";
+                }
+            }
+            else if(temperature>25&&temperature<35){
+                message=" normal";
+            }
+            else{
+                message="Cold";
+            }
+            document.getElementById("tempandtime").innerText=message
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

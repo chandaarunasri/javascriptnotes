@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*Weather Advisory System
+ Ask for weather type (rainy, sunny, snow) and temperature.
+ Use switch on weather type:
+ • Inside each case
+ • If temperature is below threshold → Show "Stay inside"
+ • Else →Show"Wearprotection*/
+
+
+
+ let weathertype=prompt("entertheweather(rainy,sunny,snow)");
+ let temperature=prompt("enter the temperature(below threshold or above threshold)");
+ message="";
+ switch(weathertype){
+    case "rainy":
+        if(temperature==="below threshold"){
+        message="stay inside"
+        }
+        else{
+            message="wearprotection";
+        }
+        break;
+        case "sunny":
+        if(temperature==="below threshold"){
+        message="stay inside"
+        }
+        else{
+            message="wearprotection";
+        }
+        break;
+        case "snow":
+        if(temperature==="below threshold"){
+        message="stay inside"
+        }
+        else{
+            message="wearprotection";
+        }
+        break;
+
+ }
+ console.log(message)
+
+
+
+    </script>
+</body>
+</html>

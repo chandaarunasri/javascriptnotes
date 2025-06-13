@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Train Ticket Fare Calculator
+ Ask if destination is a metro city and whether the passenger is a senior or student.
+ • If destination is metro city
+ • If passenger is senior → Show "40 percent off"
+ • Else →Show"Fullfare"
+ • Else
+ • If passenger is a student → Show "50 percent off"
+ • Else →Show"Fullfare
+
+ <script>
+    function Ticket() {
+            let destination =prompt("is it metro city");
+            message="";
+            if(destination==="yes"){
+                let passenger=prompt("is he is senior or student");
+                if(passenger==="senior"){
+                    message="40 percent off";
+                }
+                else{
+                    message="Full fare";
+                }
+            }
+            else{
+                let passenger=prompt("is he senior or student");
+                if (passenger==="student") {
+                    message="50 percent off";
+                } else {
+                    message="full fare";
+                }
+            }
+            document.getElementById("ticketfarecal").innerText=message
+        }
+ </script>
+    
+</body>
+</html>

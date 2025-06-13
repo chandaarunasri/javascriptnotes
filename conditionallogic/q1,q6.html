@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conditional</title>
+</head>
+<body>
+    <!-- <button onclick="agemarks()">marks and age</button>  -->
+    <!-- <p id="gradeandscholarship"></p>  -->
+
+    <script>
+       // let marks=prompt("enter the marks:")
+         /* let age=prompt("enter the age:");
+            message1=""
+            message2=""
+            if(marks>=90){
+                message1="GradeA";
+                if(age<18){
+                    message2="Eligible for scholarship";
+                }                
+            }
+            else if(marks>70&&marks<89){
+                message1="GradeB";
+                if(age>21){
+                    message2="Try again next year";
+                }
+            }
+            else{
+                message1="Fail";
+            }
+            
+           document.getElementById("gradeandscholarship").innerText=message1+"  "+message2;
+
+  Smart Greeting App
+ Ask for language (en, hi, fr) and time of day (morning or evening).
+ Use switch on language:
+ • Inside each case
+ • If morning →Show"GoodMorning"inthatlanguage
+ • Else →Show"GoodEvening"inthatlanguage*/
+
+
+      function Greeting() {
+            let language=prompt("enter language(eng,tel,fr):")
+            let timeofday=prompt("enter time")
+            message=""
+            switch (language) {
+             
+            case "eng":
+                if (timeofday === "morning") {
+                    message = "Good morning";
+                } else {
+                    message = "Good evening";
+                }
+                break;
+
+            case "tel":
+                if (timeofday === "morning") {
+                    message = "Shubodhayam";
+                } else {
+                    message = "Shubha Saayantram";
+                }
+                break;
+
+            case "fr":
+                if (timeofday === "morning") {
+                    message = "Bonjour";
+                } else {
+                    message = "Bonsoir";
+                }
+                break;
+
+            }
+            document.getElementById("Greetingapp").innerText=message
+
+ }
+   
+    </script>
+</body>
+</html>
