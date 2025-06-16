@@ -1,0 +1,33 @@
+*body{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+div{
+    background-color:purple;
+    height: 110px;
+    width: 100px;
+}
+.static{
+    background-color: blue;
+    
+}
+.relative{
+    background-color: aqua;
+    
+}
+.absolute{
+    background-color: red;
+    
+}
+.fixed{
+    background-color: chartreuse;
+
+    
+}
+.sticky{
+    background-color: darkolivegreen;
+    position: sticky;
+    
+}
