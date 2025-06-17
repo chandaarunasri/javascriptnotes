@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conditionallogic</title>
+</head>
+<body>
+    <script>
+        // question 11 ,  Dynamic Offer Display
+
+        /*let cartvalue=prompt("enter the cart value:");
+        message="";
+       if(cartvalue>1000){
+         let primestatus=prompt("yes or no");
+         if (primestatus==="yes") {
+            message="Free delivery and 20 percent discount"
+            
+         } else {
+            message="Free Delivery and 10 percent Discount"
+            
+         }
+         
+       }
+       else if(cartvalue>500&&cartvalue<1000){
+        let primestatus=prompt("yes or no");
+        if (primestatus==="yes") {
+            message="10 percent Discount";
+        }
+        else{
+            message="Delivery Charge is 50 rupees";
+        }
+          
+
+       }
+       else{
+        if(cartvalue<500){
+            message="No offers available";
+        }
+       } console.log(message);*/
+
+
+    // question 12 ,  Login System with 2-Step Verification
+
+       /*let username=prompt("enter username");
+       let password=prompt("enter password");
+       message="";
+       if(username==="Arunasri"&&password==="Ammu"){
+        let otp=prompt("enter otp");
+        if (otp==="131919") {
+            message="Login successfull";
+            
+        } else {
+            message="Invalid otp";
+            
+        }
+       }
+       else{
+        message="invalid credentials";
+       }console.log(message);*/
+
+
+       // question 13 ,  Theme Changer with Auto Detection
+
+       /*let themeoption = prompt("select option(light,dark,auto)");
+       message="";
+       if(themeoption==="light"){
+        message="light theme applied";
+       }
+       else if(themeoption==="dark"){
+        message="dark theme applied";
+       }
+       else if(themeoption==="auto"){
+        let time=prompt("enter time(before 6pm or after )")
+        if(time==="before6"){
+            message="Apply light theme";
+        }
+        else{
+            message="Apply dark theme";
+        }
+       }console.log(message);*/
+
+
+          //question 14  Course Recommendation System
+
+      /* let age=prompt("enter age");
+       if(age<18){
+        message="Try Beginner bootcamp";
+       }
+       else{
+        let areaofinterest=prompt("enter interest(coding,design,marketing)");
+        switch(areaofinterest){
+            case "coding":
+                message="Full Stack Development Course";
+               break; 
+            case "design":
+                message="UI UX Design Course";
+               break;
+            case "marketing":
+                message="Digital Marketing Course";
+               break;   
+        }
+       }console.log(message);*/
+
+// question 15  Language and Region Selector
+
+      /* let preflanguage=prompt("enter language(eng,hin,fra,es)");
+       let region=prompt("enter region(india or other)");
+       message="";
+       switch (preflanguage) {
+        case "eng":
+            if (region==="india") {
+                message="hello namasthe";   
+            }
+            
+           break;
+        case "hin":
+            message="Namaste";
+           break;
+        case "fra":
+            message="Bonjour";
+           break;
+        case "es":
+            message="hola";
+          break;              
+       }console.log(message);*/
+
+
+        // question 16  Delivery Time Estimator
+
+       /*let producttype=prompt("enter producttype(fragile,express,standard)");
+       let citytype=prompt("enter the citytype(metro or nonmetro)");
+       message="";
+       switch (producttype) {
+        case "fragile":
+            if (citytype==="metro") {
+                message="2days";
+                
+            } else if(citytype==="nonmetro") {
+                message="4days"
+            }
+            
+            break;
+        case "express":
+            if(citytype==="metro"){
+                message="1day";
+
+            } else if(citytype==="nonmetro"){
+                message="2days";
+            }
+           break; 
+        case "standard":
+            if(citytype===metro){
+                message="3days";
+            }  
+            else if(citytype==="nonmetro"){
+                message="5days";
+            }
+       }console.log(message);*/
+
+       //question 17   Bill Splitter with Promo Logic
+
+       /*let totalbillamount=prompt("enter the bill amount");
+       let promocode=prompt("enter the code");
+       message="";
+       if(promocode==="FLAT50"){
+        let numberofpeople=prompt("enter no.of people");
+        let finalbill=totalbillamount-50;
+        let personbill=finalbill/numberofpeople;
+        console.log(personbill);
+       }
+       else if(promocode==="PERCENT10"){
+        let numberofpeople=prompt("enter no.of people");
+        let finalbill=totalbillamount-totalbillamount*0.1;
+        let personbill=finalbill/numberofpeople;
+        console.log(personbill);
+        
+       }
+       else{
+        message="no discount";
+       }*/
+
+         // question 18 , Multi-Currency Checkout with Promo
+
+       /*let amount=prompt("enter the amount");
+       let currency=prompt("enter the currency(INR, USD, EUR)");
+       let promocode=prompt("enter the promocode");
+       switch (currency) {
+        case "INR":
+            if (promocode==="FLAT100") {
+                let payableamount=amount-100;
+                console.log(payableamount);  
+            }
+            else if(promocode==="PERCENT10"){
+                let payableamount=amount-amount*0.1;
+                console.log(payableamount);
+            }
+            break;
+        case "USD":
+            if (promocode==="FLAT100") {
+                let payableamount=amount-100;
+                console.log(payableamount);  
+            }
+            else if(promocode==="PERCENT10"){
+                let payableamount=amount-amount*0.1;
+                console.log(payableamount);
+            }
+            break;    
+        case "EUR":
+            if (promocode==="FLAT100") {
+                let payableamount=amount-100;
+                console.log(payableamount);  
+            }
+            else if(promocode==="PERCENT10"){
+                let payableamount=amount-amount*0.1;
+                console.log(payableamount);
+            }
+            break;
+       
+       }*/
+
+          // question 19   Student Result and Feedback Generator
+       
+       let marks=prompt("enter the marks");
+       message="";
+       if(marks>90){
+        let section=prompt("enter the section(A or B)");
+        if(section==="A"){
+            message="outstanding in section A";
+        }
+        else if (section==="B"){
+            message="excellent in section B";
+        }
+
+       }
+       else if(marks>70&&marks<89){
+        message="Good performance";
+       }
+       else{
+         if(marks<70){
+            message="Needs improvement";
+         }
+       }console.log(message);
+
+
+       //question 20   Age Group Greeting
+
+       /*let age=prompt("enter the age ");
+       message="";
+       if(age<13){
+         let gender=prompt("enter gender");
+         if (gender==="male") {
+            message="Hey young boy";
+            
+         } else {
+             if(gender==="female"){
+                message="Hey little girl";
+             }
+         }
+       }
+       else if(age>13&&age<19){
+        message="Hello teen";
+       }
+       else{
+          if(age>=20){
+            message="Welcome adult";
+          }
+       }console.log(message);*/
+       
+       
+       
+       
+       
+       
+
+
+       
+       
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
