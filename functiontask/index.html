@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body>
+    <!-- 1.Display a Welcome Message:  
+     Create a function without parameters that displays a welcome message like “Welcome
+     to Our Restaurant” inside an <h2> tag using innerText.-->
+
+     <!-- <h1>Welcome</h1>
+
+     <script>
+        function displayWelcome() {
+    document.getElementById("welcomeMessage").innerText = "Welcome to Our Restaurant";
+    }
+    displayWelcome();
+     </script> -->
+
+     <!-- 2.Show Customer Name on Click:
+    Write a function that takes a customer name as a parameter and displays "Hello, 
+
+    <button onclick="showCustomer(Arunasri)">show customer name </button>
+    <h2 id="customermessage"></h2>
+
+    <script>
+        function customer(name){
+            document.getElementById("customermessage").innerHTML=`Hello, ${name}`;
+        }
+
+    </script> -->
+
+    <!-- 3. Calculate Square of a Number: 
+    Create a function that accepts a number as a parameter and displays its square using
+    innerText.-->
+
+
+
+
+    <!--8. Smart Discount Calculator with Defaults:
+    Write a function that takes amount and an optional discountPercent (default = 10%).
+    Display final amount after discount using innerText. -->
+
+    <h2 id="discountResult"></h2>
+
+<script>
+function applyDiscount(amount, discountPercent = 10) {
+    let discountAmount = (discountPercent / 100) * amount;
+    let finalAmount = amount - discountAmount;
+    document.getElementById("discountResult").innerText = `Final Amount: ₹${finalAmount}`;
+}
+applyDiscount(500); // Example call
+</script>
+
+       
+
+
+
+
+
+
+
+
+
+</body>
+</html>
