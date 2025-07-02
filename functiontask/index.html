@@ -34,7 +34,70 @@
 
     <!-- 3. Calculate Square of a Number: 
     Create a function that accepts a number as a parameter and displays its square using
-    innerText.-->
+    innerText.
+    
+    <h2 id="squareResult"></h2>
+
+    <script>
+    function calculateSquare(num) {
+    document.getElementById("squareResult").innerText = `Square: ${num * num}`;
+    }
+    calculateSquare(2); 
+    </script> -->
+
+    <!-- 4. Display Product and Price (Default):
+   Write a function that takes product name and price (with price as a default parameter= 100). 
+   Display both using innerHTML. -->
+
+   <!-- <h2 id="productDetails"></h2>
+
+   <script>
+     function displayProduct(product, price = 250) {
+     document.getElementById("productDetails").innerHTML = `Product: ${product}, Price: ₹${price}`;
+     }
+     displayProduct("pizza");
+    </script> -->
+
+
+   <!-- 5. Create a Function to Greet with Default Name: 
+    Create a function that greets a user by name, and if no name is passed, defaults to "Guest" -->
+
+    <h2 id="greeting"></h2>
+    <script>
+        function greetUser(name="Guest"){
+            document.getElementById("greeting").innerText = `Hello,${name}`;
+
+        }
+        greetUser();
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -43,7 +106,7 @@
     Write a function that takes amount and an optional discountPercent (default = 10%).
     Display final amount after discount using innerText. -->
 
-    <h2 id="discountResult"></h2>
+    <!-- <h2 id="discountResult"></h2>
 
 <script>
 function applyDiscount(amount, discountPercent = 10) {
@@ -51,12 +114,15 @@ function applyDiscount(amount, discountPercent = 10) {
     let finalAmount = amount - discountAmount;
     document.getElementById("discountResult").innerText = `Final Amount: ₹${finalAmount}`;
 }
-applyDiscount(500); // Example call
-</script>
-
-       
+applyDiscount(500); 
+</script> -->
 
 
+
+
+
+
+    
 
 
 
