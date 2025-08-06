@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Cards</title>
+  <style>
+    body {
+      font-family:'Times New Roman', Times, serif;
+      padding: 20px;
+    }
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+    .out-of-stock {
+      color: red;
+      font-weight: bold;
+    }
+    .available {
+      color: green;
+      font-weight: bold;
+    }
+    s {
+      color: gray;
+    }
+    
+    
+  </style>
+</head>
+<body>
+
+
+  <h2>Product List</h2>
+  <div class="cards-container" id="productCards"></div>
+  <img src="../productcard/image/Realme-Smartphone-Under-10000.webp" alt="">
+  <script>
+    const products = [
+      {
+        productImage: "../productcard/image/Realme-Smartphone-Under-10000.webp",
+        productName: "Realme",
+        price: 10000,
+        discount: 10,
+        stock: 3
+      },
+      {
+        productImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv2M9UynBeJz8C8SnI3ViVFxqBkXTX03OL8g&s",
+        productName: "Laptop",
+        price: 50000,
+        discount: 15,
+        stock: 0
+      },
+      {
+        productImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqPfApWSmr7hNUy82cpsJN3bzPCyGeEJY_cQ&s",
+        productName: "Watch",
+        price: 2000,
+        discount: 5,
+        stock: true
+      },
+      {
+        productImage: "data:image/jpeg;base64,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",
+        productName: "Shoes",
+        price: 3000,
+        discount: 20,
+        stock: false
+      },
+      {
+        productImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOnl0048wABb2SDln_OMbifRuY9wa-ohFogQ&s",
+        productName: "Bag",
+        price: 1500,
+        discount: 25,
+        stock: 5
+      },
+      {
+        productImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhODOIf5jz5Q89y7Elk66BvVMvrQipqNhk8Q&s",
+        productName: "Speaker",
+        price: 2500,
+        discount: 30,
+        stock: 0
+      },
+      {
+        productImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSv7pDiGM7YFlH4esiZGjWMSt_NNELccYJog&s",
+        productName: "Headphones",
+        price: 3500,
+        discount: 10,
+        stock: true
+      },
+      {
+        productImage: "https://m.media-amazon.com/images/I/71Mt4JAZQtL._AC_SL1500_.jpg",
+        productName: "Tablet",
+        price: 15000,
+        discount: 12,
+        stock: 2
+      }
+    ];
+
+    const container = document.getElementById("productCards");
+
+    products.forEach(product => {
+      const discountedPrice = product.price - (product.price * product.discount) / 100;
+      const isAvailable = product.stock === true || product.stock >= 1;
+
+      const card = document.createElement("div");
+      card.className = "card";
+
+      card.innerHTML = `
+        <img src="${product.productImage}" alt="${product.productName}">
+        <h3>${product.productName}</h3>
+        <p><s>₹${product.price}</s> <strong>₹${discountedPrice}</strong></p>
+        <p class="${isAvailable ? 'available' : 'out-of-stock'}">
+          ${isAvailable ? 'Available' : 'Out of Stock'}
+        </p>
+      `;
+
+      container.appendChild(card);
+    });
+  </script>
+
+</body>
+</html>

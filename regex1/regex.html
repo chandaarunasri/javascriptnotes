@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cards with Stock</title>
+
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+    <div id="container" class="flex flex-wrap justify-center gap-4 p-6">
+        <!-- Product cards will be added here -->
+    </div>
+
+    <script>
+        let products = [
+            { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFI451_VzftMWgG1Mfn8yE61kqxY_cErrqug&s", name: "RealMe", price: 10000, discount: 100, stock: 5 },
+            { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv2M9UynBeJz8C8SnI3ViVFxqBkXTX03OL8g&s", name: "Laptop", price: 800, discount: 50, stock: 0 },
+            { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqPfApWSmr7hNUy82cpsJN3bzPCyGeEJY_cQ&s", name: "Watch", price: 2000, discount: 20, stock: true },
+            { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSv7pDiGM7YFlH4esiZGjWMSt_NNELccYJog&s", name: "Headphones", price: 1500, discount: 10, stock: false },
+            { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqzoKgURfLeIEvYSryrZxDtZhJuB_UbtZY9A&s", name: "Shoes", price: 1000, discount: 50, stock: 2 },
+            { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhODOIf5jz5Q89y7Elk66BvVMvrQipqNhk8Q&s", name: "Speaker", price: 1200, discount: 200, stock: 0 },
+            { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOnl0048wABb2SDln_OMbifRuY9wa-ohFogQ&s", name: "Bag", price: 600, discount: 100, stock: 3 },
+            { url: "https://m.media-amazon.com/images/I/71Mt4JAZQtL._AC_SL1500_.jpg", name: "Tablet", price: 40000, discount: 50, stock: 1 },
+          
+        ];
+
+        let container = document.getElementById("container");
+
+        for (let i = 0; i < products.length; i++) {
+            let product = products[i];
+            let finalPrice = product.price - product.discount;
+
+            // Stock status
+            let isAvailable = product.stock === true || product.stock >= 1;
+            let stockText = isAvailable ? "Available" : "Out of Stock";
+            let stockClass = isAvailable ? "text-green-600" : "text-red-600";
+
+            let productDiv = document.createElement("div");
+            productDiv.innerHTML = `
+                <div class="border p-4 shadow-lg rounded-lg bg-white w-64 text-center">
+                    <img src="${product.url}" alt="${product.name}" class="w-24 h-24 mx-auto mb-3 object-contain">
+                    <h3 class="text-lg font-semibold mb-1">${product.name}</h3>
+                    <p class="text-gray-700">Price: <s>$${product.price}</s></p>
+                    <p class="text-red-500">Discount: $${product.discount}</p>
+                    <p class="text-black font-bold">Final Price: $${finalPrice}</p>
+                    <p class="${stockClass} font-semibold mt-2">${stockText}</p>
+                </div>
+            `;
+            container.appendChild(productDiv);
+        }
+    </script>
+</body>
+
+</html>

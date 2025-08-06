@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+  <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm text-center">
+    <h2 class="text-2xl font-bold mb-6 text-gray-700">Login</h2>
+
+    <form onsubmit="handleLogin(event)">
+      <input
+        type="text"
+        id="username"
+        placeholder="Enter Username"
+        class="w-full p-2 border border-gray-300 rounded mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        required
+      />
+
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter Password"
+        class="w-full p-2 border border-gray-300 rounded mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        required
+      />
+
+      <!-- Hidden button to trigger form with Enter -->
+      <input type="submit" class="hidden" />
+    </form>
+
+    <p id="message" class="text-sm mt-4 text-gray-700"></p>
+  </div>
+
+  <script>
+    // Auto-register demo credentials
+    localStorage.setItem("user", "aruna");
+    localStorage.setItem("pass", "1234");
+
+    function handleLogin(event) {
+      event.preventDefault(); // Prevent form refresh
+
+      const userInput = document.getElementById("username").value;
+      const passInput = document.getElementById("password").value;
+
+      const savedUser = localStorage.getItem("user");
+      const savedPass = localStorage.getItem("pass");
+
+      if (userInput === savedUser && passInput === savedPass) {
+        // Redirect to welcome page
+        window.location.href = "welcome.html";
+      } else {
+        const msg = document.getElementById("message");
+        msg.innerText = "❌ Invalid credentials!";
+        msg.className = "text-red-600 mt-4";
+      }
+    }
+  </script>
+
+</body>
+</html>
