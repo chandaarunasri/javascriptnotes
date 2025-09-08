@@ -74,19 +74,19 @@
       let discount = 0;
       let message = "";
 
-      // 1. Simple if
+    
       if (amount > 500) {
         message += "✅ You qualify for a discount check.<br>";
       }
 
-      // 2. if-else
+    
       if (amount >= 1000) {
         message += "🎉 Big purchase! Extra benefits applied.<br>";
       } else {
         message += "Normal purchase.<br>";
       }
 
-      // 3. else-if ladder
+    
       if (membership === "Silver") {
         discount = 5;
       } else if (membership === "Gold") {
@@ -94,11 +94,11 @@
       } else if (membership === "Platinum") {
         discount = 15;
       } else {
-        discount = 2; // default discount
+        discount = 2; 
       }
       message += `💰 Membership discount: ${discount}%<br>`;
 
-      // 4. Nested if-else
+    
       if (amount >= 1000) {
         if (membership === "Platinum") {
           discount += 5; // Extra 5%
@@ -106,7 +106,6 @@
       }
       message += `✅ Final discount after nested check: ${discount}%<br>`;
 
-      // 5. switch-case for gift
       let gift;
       switch (membership) {
         case "Silver":
@@ -123,7 +122,7 @@
       }
       message += `Bonus Gift: ${gift}`;
 
-      // Show output
+    
       document.getElementById("result").innerHTML = message;
     }
   </script>
