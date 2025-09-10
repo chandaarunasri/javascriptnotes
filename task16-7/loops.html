@@ -1,51 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>loops</title>
+  <meta charset="UTF-8">
+  <title>JS Product Demo</title>
+  <style>
+    .product-card-container { display: flex; gap: 10px; }
+    .product-card-container > div { border: 1px solid gray; padding: 10px; width: 150px; }
+    table { border-collapse: collapse; }
+    td, th { border: 1px solid #aaa; padding: 6px; }
+    .section { margin-bottom: 30px; }
+  </style>
 </head>
 <body>
-    <form action="">
-      <!-- 1<ul id="productList"></ul> 
+  <div class="section">
+    <h2>1. Product List as Bullet Points</h2>
+    <ul id="productList"></ul>
+  </div>
 
-      2  <h1>Discount Table</h1>  
-       <table border="1" id="discountTable"> 
-        <tr> 
-            <th>original price</th>
-            <th 10% discount price></th>
-        </tr>
-      </table> -->
-
-
-      <!--3 <h3>Product Cards</h3> -->
-      <!-- <div id="productCards" style="display: flex; gap: 20px;"></div> -->
-
-
-    <h1>order summary</h1>
-    <table boarder="1" id="order Table"> 
+  <div class="section">
+    <h2>2. Discount Table</h2>
+    <table>
+      <thead>
         <tr>
-         <th>S.no</th>
-         <th>product</th>
-         <th>Quantity</th>
-         <th>price</th>
-         <th>Total</th>
-
-
-
+          <th>Original Price</th>
+          <th>Discounted Price (10% off)</th>
         </tr>
-
-
+      </thead>
+      <tbody id="discountTable"></tbody>
     </table>
+  </div>
 
+  <div class="section">
+    <h2>3. Product Cards</h2>
+    <div id="productCards" class="product-card-container"></div>
+  </div>
 
+  <div class="section">
+    <h2>4. Order Summary Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody id="orderSummary"></tbody>
+    </table>
+  </div>
 
-
-
-
-    <!--11 <ul id="cartList"></ul> --> 
-    </form>
-
-    <script src="./loops.js"></script>
+  <div class="section">
+    <h2>11. Add to Cart Simulation</h2>
+    <ul id="cartList"></ul>
+  </div>
+  <script src="./loops.js"></script>
 </body>
 </html>

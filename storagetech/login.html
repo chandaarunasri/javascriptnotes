@@ -40,7 +40,7 @@
     localStorage.setItem("pass", "1234");
 
     function handleLogin(event) {
-      event.preventDefault(); // Prevent form refresh
+      event.preventDefault(); 
 
       const userInput = document.getElementById("username").value;
       const passInput = document.getElementById("password").value;
@@ -53,7 +53,7 @@
         window.location.href = "welcome.html";
       } else {
         const msg = document.getElementById("message");
-        msg.innerText = "❌ Invalid credentials!";
+        msg.innerText = "Invalid credentials!";
         msg.className = "text-red-600 mt-4";
       }
     }
