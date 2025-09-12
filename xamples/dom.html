@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM</title>
+</head>
+<body>
+  <!-- Page Comment -->
+  <h1 id="heading">Hello World</h1>
+  <p class="para">This is a paragraph.</p>
+
+  <script>
+    // Document Node
+    console.log(document.nodeType); 
+
+    // Element Node
+    let h = document.getElementById("heading");
+    console.log(h.nodeType); 
+
+    // Text Node
+    console.log(h.firstChild.nodeType); 
+    console.log(h.firstChild.nodeValue); 
+
+  </script>
+</body>
+</html>
